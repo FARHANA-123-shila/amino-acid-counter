@@ -1,0 +1,15 @@
+# Amino Acid Counter
+
+def count_amino_acids(protein_seq):
+    protein_seq = protein_seq.upper()
+    amino_count = {}
+    for aa in protein_seq:
+        amino_count[aa] = amino_count.get(aa, 0) + 1
+    return amino_count
+
+protein = input("Enter Protein sequence: ")
+aa_count = count_amino_acids(protein)
+
+print("\nAmino Acid Frequency:")
+for aa, count in aa_count.items():
+    print(f"{aa}: {count}")
